@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiio</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./Docs/Style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide slide1 !bg-cover !bg-center md:!bg-top object-top w-full object-cover">
+                <div class="h-[calc(100vh-6rem)] flex items-center max-w-7xl mx-auto md:p-5 p-10 justify-center">
+                    <h1 class="text-white font-medium capitalize leading-tight md:text-6xl text-3xl">qiio CEO Felix
+                        Adamczyk
+                        recognized with the “Digital Shaper 2023” award in the “The Smarties”
+                        category</h1>
+                </div>
+            </div>
+            <div class="swiper-slide slide4 w-full object-cover">
+                <div class="h-[calc(100vh-6rem)] flex items-center max-w-3xl mx-auto md:p-5 p-10 justify-center">
+                    <h1 class="text-white font-medium capitalize leading-tight text-6xl">A proud and innovative Swiss
+                        company
+                    </h1>
+                </div>
+            </div>
+            <div class="swiper-slide slide2 object-top w-full object-cover">
+                <div
+                    class="h-[calc(100vh-6rem)] flex md:gap-10 gap-4 md:flex-row flex-col items-center max-w-5xl w-full mx-auto md:p-5 p-10 justify-center">
+                    <img src="./Docs/Assets/slide2-1.webp" class="w-full object-cover md:h-[30rem]" alt="">
+                    <img src="./Docs/Assets/slide1.jpg" class="w-full object-cover md:h-[30rem]" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide3 w-full object-cover">
+                <div class="h-[calc(100vh-6rem)] flex items-center max-w-8xl mx-auto md:p-5 p-10 justify-center">
+                    <h1 class="text-white font-medium capitalize leading-tight max-w-3xl ml-auto text-6xl">qiio takes
+                        the complexity out of IoT
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+
+    
+    <script src="./Docs/javascript/Navbar.js"></script>
+    <script src="./Docs/javascript/global.js"></script>
+    <script src="./Docs/javascript/Footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            autoplay: {
+                delay: 2500
+            },
+            loop: true,
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
+
+</body>
+
+</html>
