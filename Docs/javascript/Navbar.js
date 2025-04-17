@@ -3,7 +3,7 @@ navbar.innerHTML = `
     <div x-data="accordion(1)">
 
         <!-- Navbar -->
-        <nav class="sticky h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
+        <nav class="absolute h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
             <div class="w-full max-w-7xl mx-auto p-5 flex items-center justify-between">
                 <a href="./index.html">
                     <img src="./Docs/Assets/logo.svg" class="md:h-14 h-10" alt="">
@@ -23,38 +23,38 @@ navbar.innerHTML = `
                 <div class="w-full text-gray-800">
                     <img src="./Docs/Assets/technology_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold capitalize mt-4 text-[#4285f4] mb-5">qiio Smart Connectivity</h2>
-                    <a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">This is Smart
+                    <a href="Smart-Connectivity.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">This is Smart
                         Connectivity</a>
-                    <a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">qiio
+                    <a href="./Smart-Connectivity.html#qiio-sphere-studio" class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">qiio
                         Sphere
                         Studio®</a>
                     <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                        <li><a href="./Smart-Connectivity.html#qiio-sphere-studio" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                 Survey</a></li>
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                        <li><a href="./Smart-Connectivity.html#qiio-sphere-studio" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                 Triage</a></li>
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                        <li><a href="./Smart-Connectivity.html#qiio-sphere-studio" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                 Insurance</a></li>
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                        <li><a href="./Smart-Connectivity.html#qiio-sphere-studio" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                 Location</a></li>
                     </ul>
-                    <a href=""
+                    <a href="./Smart-Connectivity.html#infrastructure"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Infrastructure</a>
                     <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">q200
+                        <li><a href="./Smart-Connectivity.html#infrastructure" class="font-medium transition-all duration-500 hover:text-[#4285f4]">q200
                                 Guardian
                             </a></li>
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Concentrator
+                        <li><a href="concentrator-xn.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Concentrator
                                 XN
                             </a></li>
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Global
+                        <li><a href="./Smart-Connectivity.html#global-connectivity" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Global
                                 Connectivity
                             </a></li>
                     </ul>
-                    <a href=""
+                    <a href="./Smart-Connectivity.html#support"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Support</a>
                     <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Extended
+                        <li><a href="./Smart-Connectivity.html#support" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Extended
                                 Warranty</a></li>
                     </ul>
                 </div>
@@ -62,7 +62,7 @@ navbar.innerHTML = `
                     <img src="./Docs/Assets/products_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold capitalize mt-4 text-[#4285f4] mb-5">Succeed with qiio Smart
                         Connectivity</h2>
-                    <a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Hit the ground
+                    <a href="hit-the-ground-running.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Hit the ground
                         running</a>
                     <ul class="mt-2 list-disc space-y-2 pl-5">
                         <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">With your
