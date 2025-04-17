@@ -3,15 +3,15 @@ navbar.innerHTML = `
     <div x-data="accordion(1)">
 
         <!-- Navbar -->
-        <nav class="sticky h-24 flex items-center justify-center top-0 left-0 bg-gray-200 z-40 w-full">
+        <nav class="sticky h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
             <div class="w-full max-w-7xl mx-auto p-5 flex items-center justify-between">
                 <a href="./index.html">
                     <img src="./Docs/Assets/logo.svg" class="md:h-14 h-10" alt="">
                 </a>
                 <div class="flex items-center md:gap-8 gap-5">
-                    <a href="" class="font-medium  transition-all duration-500 hover:text-[#4285f4]">Career</a>
-                    <a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">News</a>
-                    <i id="toggle_Navbar" class="fa-solid fa-bars cursor-pointer" @click="handleClick()"></i>
+                    <a href="careers.html" class="font-medium  transition-all duration-500 hover:text-[#4285f4]">Career</a>
+                    <a href="news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">News</a>
+                    <img src="./Docs/Assets/bar.svg" class="h-6 opacity-90 cursor-pointer" @click="handleClick()" alt="bar">
                 </div>
             </div>
         </nav>
