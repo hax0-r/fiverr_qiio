@@ -288,40 +288,40 @@ const cardsData = [
         link: "/News/qiio-exhibition-bosch-connectedworld-2019.html"
     },
     {
-        image: "./Docs/Assets/news/.webp",
+        image: "./Docs/Assets/news/how-iot-reduces-costs-for-coffee-machines.webp",
         date: "March 21, 2019",
         description: "How IoT reduces costs for coffee machines",
-        link: "/News/.html"
+        link: "/News/how-iot-reduces-costs-for-coffee-machines.html"
     },
     {
-        image: "./Docs/Assets/news/.webp",
+        image: "./Docs/Assets/news/tips-on-iot-security.webp",
         date: "March 15, 2019",
         description: "Tips on IoT security",
-        link: "/News/.html"
+        link: "/News/tips-on-iot-security.html"
     },
     {
-        image: "./Docs/Assets/news/.webp",
+        image: "./Docs/Assets/news/qiio-highlights-of-mobile-world-congress-and-embedded-world.webp",
         date: "March 12, 2019",
         description: "qiio highlights of Mobile World Congress and embedded world",
-        link: "/News/.html"
+        link: "/News/qiio-highlights-of-mobile-world-congress-and-embedded-world.html"
     },
     {
-        image: "./Docs/Assets/news/.webp",
+        image: "./Docs/Assets/news/iot-webcast-security-and-microsoft-azure-sphere.webp",
         date: "March 11, 2019",
         description: "IoT Webcast: Security and Microsoft Azure Sphere",
-        link: "/News/.html"
+        link: "/News/iot-webcast-security-and-microsoft-azure-sphere.html"
     },
     {
-        image: "./Docs/Assets/news/.webp",
+        image: "./Docs/Assets/news/how-iot-optimizes-sales-prediction-and-logistics.webp",
         date: "February 20, 2019",
         description: "How IoT optimizes sales prediction and logistics",
-        link: "/News/.html"
+        link: "/News/how-iot-optimizes-sales-prediction-and-logistics.html"
     },
     {
-        image: "./Docs/Assets/news/.webp",
+        image: "./Docs/Assets/news/end-to-end-iot-solution.jpg",
         date: "February 20, 2019",
         description: "End-to-end IoT solution",
-        link: "/News/.html"
+        link: "/News/end-to-end-iot-solution.html"
     },
 ];
 
