@@ -3,7 +3,7 @@ navbar.innerHTML = `
     <div x-data="accordion(1)">
 
         <!-- Navbar -->
-        <nav class="absolute h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
+        <nav class="sticky h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
             <div class="w-full max-w-7xl mx-auto p-5 flex items-center justify-between">
                 <a href="./index.html">
                     <img src="./Docs/Assets/logo.svg" class="md:h-14 h-10" alt="">
@@ -65,10 +65,10 @@ navbar.innerHTML = `
                     <a href="hit-the-ground-running.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Hit the ground
                         running</a>
                     <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">With your
+                        <li><a href="starter-kit.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">With your
                                 Starter Kit
                             </a></li>
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">With the PoC
+                        <li><a href="poc-in-a-box-package.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">With the PoC
                                 in
                                 a Box Package
                             </a></li>
@@ -77,15 +77,15 @@ navbar.innerHTML = `
                 <div class="w-full text-gray-800">
                     <img src="./Docs/Assets/buy_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold capitalize mt-4 text-[#4285f4] mb-5">Buy</h2>
-                    <a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Buy from qiio
+                    <a href="buy-from-qiio.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Buy from qiio
                     </a>
-                    <a href=""
+                    <a href="buy-from-qiio.html#Distributors"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Distributors
                     </a>
                     <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Swisscom
+                        <li><a href="buy-from-qiio.html#Distributors" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Swisscom
                             </a></li>
-                        <li><a href="" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Avnet
+                        <li><a href="buy-from-qiio.html#Distributors" class="font-medium transition-all duration-500 hover:text-[#4285f4]">Avnet
                             </a></li>
                     </ul>
                     <a href=""
