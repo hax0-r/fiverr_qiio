@@ -20,13 +20,13 @@ footer.innerHTML = `
             </div>
 
             <div class="w-full text-gray-700">
-                <a href="">
+                <a href="https://www.linkedin.com/company/qiio">
                     <img src="/Docs/Assets/home/linkedin.svg" alt="">
                 </a>
                 <ul class="space-y-2 md:mt-5 mt-3">
-                    <li><a href="Cookie-Policy.html" class="hover:underline"> Cookie Policy</a></li>
-                    <li><a href="Privacy-Policy.html" class="hover:underline"> Privacy Policy</a></li>
-                    <li><a href="Imprint.html" class="hover:underline"> Imprint</a></li>
+                    <li><a href="/Cookie-Policy.html" class="hover:underline"> Cookie Policy</a></li>
+                    <li><a href="/Privacy-Policy.html" class="hover:underline"> Privacy Policy</a></li>
+                    <li><a href="/Imprint.html" class="hover:underline"> Imprint</a></li>
                 </ul>
 
             </div>

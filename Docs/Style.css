@@ -1,11 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: sofia;
+    src: url(./Fonts/SofiaPro-Regular.otf);
+}
+
+@font-face {
+    font-family: sofia2;
+    src: url(./Fonts/SofiaPro-SemiBold.otf);
+}
 
 * {
     box-sizing: border-box;
     outline: none;
-    font-family: "Poppins", sans-serif;
+    font-family: sofia;
     scroll-behavior: smooth;
 }
+
+h2,
+h1,
+h3,
+h4 {
+    font-family: sofia2;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 1.5em;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 1em;
+}
+
+.custom-list li::before,
+.custom-list li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.custom-list li::before {
+    left: 0;
+    background-color: #db4437;
+}
+
+ul li::after {
+    left: 8px;
+    background-color: #f4b400;
+}
+
+
+.custom-heading {
+    font-family: 'sofia2', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    /* space between text and dots */
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.dots {
+    display: flex;
+    gap: 4px;
+}
+
+.dots::before,
+.dots::after {
+    content: "";
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+}
+
+.dots::before {
+    background-color: #db4437;
+}
+
+.dots::after {
+    background-color: #f4b400;
+}
+
+
 
 :root {
     --black-color: #1e1c1c;
@@ -82,50 +170,50 @@ input:user-invalid {
     align-items: center;
 }
 
-.slide1{
-    background: linear-gradient(rgba(0, 0, 0, 0.199),rgba(0, 0, 0, 0.493)),url(/Docs/Assets/slide1.jpg);
+.slide1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.493)), url(/Docs/Assets/slide1.jpg);
 }
 
-.slide2{
-    background: linear-gradient(rgba(0, 0, 0, 0.199),rgba(0, 0, 0, 0.493)),url(/Docs/Assets/slide2-1.webp) center/cover no-repeat;
+.slide2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.493)), url(/Docs/Assets/slide2-1.webp) center/cover no-repeat;
 }
 
-.slide3{
-    background: linear-gradient(rgba(0, 0, 0, 0.199),rgba(0, 0, 0, 0.493)),url(/Docs/Assets/slide3.jpg) center/cover no-repeat;
+.slide3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.493)), url(/Docs/Assets/slide3.jpg) center/cover no-repeat;
 }
 
-.slide4{
-    background: linear-gradient(rgba(0, 0, 0, 0.199),rgba(0, 0, 0, 0.493)),url(/Docs/Assets/slide4.webp);
+.slide4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.493)), url(/Docs/Assets/slide4.webp);
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     background: #db4437 !important;
 }
 
 /* home */
 
-.bgConnecting{
-    background: linear-gradient(rgba(0, 0, 0, 0.486),rgba(0, 0, 0, 0.493)),url(/Docs/Assets/bgConnecting.jpg) center/cover no-repeat;
+.bgConnecting {
+    background: linear-gradient(rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.493)), url(/Docs/Assets/bgConnecting.jpg) center/cover no-repeat;
     background-attachment: fixed;
 }
 
-.Founder{
-    background: linear-gradient(#0c647f59,#0c647f54),url(/Docs/Assets/home/Founder.jpg) center/cover no-repeat;
+.Founder {
+    background: linear-gradient(#0c647f59, #0c647f54), url(/Docs/Assets/home/Founder.jpg) center/cover no-repeat;
     background-attachment: fixed;
 }
 
-.home_card1{
-    background: linear-gradient(rgba(0, 0, 0, 0.562),rgba(0, 0, 0, 0.589)),url(/Docs/Assets/home/card1.jpg) center/cover no-repeat;
+.home_card1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.589)), url(/Docs/Assets/home/card1.jpg) center/cover no-repeat;
 }
 
-.home_card2{
-    background: linear-gradient(rgba(0, 0, 0, 0.562),rgba(0, 0, 0, 0.589)),url(/Docs/Assets/home/card2.jpg) center/cover no-repeat;
+.home_card2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.589)), url(/Docs/Assets/home/card2.jpg) center/cover no-repeat;
 }
 
-.home_card3{
-    background: linear-gradient(rgba(0, 0, 0, 0.562),rgba(0, 0, 0, 0.589)),url(/Docs/Assets/home/card3.jpg) center/cover no-repeat;
+.home_card3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.589)), url(/Docs/Assets/home/card3.jpg) center/cover no-repeat;
 }
 
-.home_card4{
-    background: linear-gradient(rgba(0, 0, 0, 0.562),rgba(0, 0, 0, 0.589)),url(/Docs/Assets/home/card4.jpg) center/cover no-repeat;
+.home_card4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.589)), url(/Docs/Assets/home/card4.jpg) center/cover no-repeat;
 }
