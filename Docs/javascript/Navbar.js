@@ -1,6 +1,6 @@
 const navbar = document.getElementById("navbar")
 navbar.innerHTML = `
-    <div x-data="accordion(1)" class="fixed top-0 left-0 z-50 w-full overflow-auto h-screen">
+    <div x-data="accordion(1)" id="nav" class="fixed top-0 left-0 z-50 w-full overflow-auto ">
 
         <!-- Navbar -->
         <nav class=" h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
@@ -12,7 +12,7 @@ navbar.innerHTML = `
                     <a href="/careers.html"
                         class="font-medium  transition-all duration-500 hover:text-[#4285f4]">Career</a>
                     <a href="/news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">News</a>
-                    <img src="/Docs/Assets/bar.svg" class="h-6 opacity-90 cursor-pointer" @click="handleClick()"
+                    <img src="/Docs/Assets/bar.svg" id="bar" class="h-6 opacity-90 cursor-pointer" @click="handleClick()"
                         alt="bar">
                 </div>
             </div>
@@ -21,7 +21,7 @@ navbar.innerHTML = `
         <!-- Collapsible Panel -->
         <div class="transition-all duration-500 overflow-hidden absolute top-[6rem] w-full z-40 bg-white"
             :style="open ? 'max-height: ' + tabHeight + 'px' : 'max-height: 0px'">
-            <div x-ref="tab" class="max-w-7xl p-5 grid lg:grid-cols-4 overflow-auto md:grid-cols-2 grid-cols-1 gap-6 w-full mx-auto">
+            <div x-ref="tab" class="max-w-7xl p-5 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 w-full mx-auto">
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/technology_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold capitalize mt-4 text-[#4285f4] mb-5">qiio Smart Connectivity</h2>
@@ -187,4 +187,17 @@ document.addEventListener('alpine:init', () => {
             });
         }
     }));
+});
+
+const bar = document.getElementById("bar");
+const nav = document.getElementById("nav");
+
+bar.addEventListener('click', () => {
+    if (nav.classList.contains("h-screen")) {
+        setTimeout(() => {
+            nav.classList.remove("h-screen");
+        }, 1000);
+    } else {
+        nav.classList.add("h-screen");
+    }
 });

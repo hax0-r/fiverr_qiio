@@ -330,7 +330,7 @@ const container = document.getElementById("cardContainer");
 cardsData.forEach(card => {
     const cardElement = document.createElement("a");
     cardElement.href = card.link;
-    cardElement.className = "flex flex-col w-full hover:-translate-y-2 transition-all duration-500";
+    cardElement.className = "flex cursor-pointer flex-col w-full hover:-translate-y-2 transition-all duration-500";
 
     cardElement.innerHTML = `
     <div class="flex items-center justify-center w-full bg-gray-50 p-2 rounded-lg">
