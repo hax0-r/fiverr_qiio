@@ -5,13 +5,13 @@ navbar.innerHTML = `
         <!-- Navbar -->
         <nav class=" h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
             <div class="w-full max-w-7xl mx-auto p-5 flex items-center justify-between">
-                <a href="/index.html">
+                <a @click="handleClick()" href="/index.html">
                     <img src="/Docs/Assets/logo.svg" class="md:h-14 h-10" alt="">
                 </a>
                 <div class="flex items-center md:gap-8 gap-5">
-                    <a href="/careers.html"
+                    <a @click="handleClick()" href="/careers.html"
                         class="font-medium  transition-all duration-500 hover:text-[#4285f4]">Career</a>
-                    <a href="/news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">News</a>
+                    <a @click="handleClick()" href="/news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">News</a>
                     <img src="/Docs/Assets/bar.svg" id="bar" class="h-6 opacity-90 cursor-pointer"
                         @click="handleClick()" alt="bar">
                 </div>
@@ -26,7 +26,7 @@ navbar.innerHTML = `
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/technology_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold  mt-4 text-[#4285f4] mb-5">qiio Smart Connectivity</h2>
-                    <a href="Smart-Connectivity.html"
+                    <a @click="handleClick()" href="Smart-Connectivity.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4]">This is Smart
                         Connectivity</a>
 
@@ -34,7 +34,7 @@ navbar.innerHTML = `
                         <div class="border-b border-slate-200">
                             <button onclick="toggleAccordion(1)"
                                 class="w-full flex justify-between items-center py-5 text-slate-800">
-                                <a href="/Smart-Connectivity.html#qiio-sphere-studio">qiio Sphere Studio®</a>
+                                <a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio" >qiio Sphere Studio®</a>
                                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -46,16 +46,16 @@ navbar.innerHTML = `
                             <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-5">
                                     <ul class="list-disc space-y-2 pl-5">
-                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                        <li><a  @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                                 Survey</a></li>
-                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                        <li><a  @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                                 Triage</a></li>
-                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                        <li><a  @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                                 Insurance</a></li>
-                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                        <li><a  @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                                 Location</a></li>
                                     </ul>
@@ -65,7 +65,7 @@ navbar.innerHTML = `
                         <div class="border-b border-slate-200">
                             <button onclick="toggleAccordion(2)"
                                 class="w-full flex justify-between items-center py-5 text-slate-800">
-                                <a href="/Smart-Connectivity.html#infrastructure">Infrastructure</a>
+                                <a  @click="handleClick()" href="/Smart-Connectivity.html#infrastructure">Infrastructure</a>
                                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -77,15 +77,15 @@ navbar.innerHTML = `
                             <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-5">
                                     <ul class="list-disc space-y-2 pl-5">
-                                        <li><a href="/Smart-Connectivity.html#infrastructure"
+                                        <li><a  @click="handleClick()" href="/Smart-Connectivity.html#infrastructure"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">q200
                                                 Guardian
                                             </a></li>
-                                        <li><a href="/concentrator-xn.html"
+                                        <li><a  @click="handleClick()" href="/concentrator-xn.html"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Concentrator
                                                 XN
                                             </a></li>
-                                        <li><a href="/Smart-Connectivity.html#global-connectivity"
+                                        <li><a  @click="handleClick()" href="/Smart-Connectivity.html#global-connectivity"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Global
                                                 Connectivity
                                             </a></li>
@@ -96,7 +96,7 @@ navbar.innerHTML = `
                         <div class="border-b border-slate-200">
                             <button onclick="toggleAccordion(3)"
                                 class="w-full flex justify-between items-center py-5 text-slate-800">
-                                <a href="/Smart-Connectivity.html#support">Support</a>
+                                <a @click="handleClick()" href="/Smart-Connectivity.html#support">Support</a>
                                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -108,16 +108,16 @@ navbar.innerHTML = `
                             <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-5">
                                     <ul class="list-disc space-y-2 pl-5">
-                                        <li><a href="/Smart-Connectivity.html#support"
+                                        <li><a @click="handleClick()" href="/Smart-Connectivity.html#support"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Extended
                                                 Warranty</a></li>
-                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                        <li><a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                                 Triage</a></li>
-                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                        <li><a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                                 Insurance</a></li>
-                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                        <li><a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                                 Location</a></li>
                                     </ul>
@@ -127,45 +127,45 @@ navbar.innerHTML = `
                     </div>
 
                     <div class="md:block hidden">
-                        <a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                        <a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                             class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">qiio
                             Sphere
                             Studio®</a>
                         <ul class="mt-2 list-disc space-y-2 pl-5">
-                            <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                            <li><a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                     Survey</a></li>
-                            <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                            <li><a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                     Triage</a></li>
-                            <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                            <li><a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                     Insurance</a></li>
-                            <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                            <li><a @click="handleClick()" href="/Smart-Connectivity.html#qiio-sphere-studio"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
                                     Location</a></li>
                         </ul>
 
-                        <a href="/Smart-Connectivity.html#infrastructure"
+                        <a @click="handleClick()" href="/Smart-Connectivity.html#infrastructure"
                             class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Infrastructure</a>
                         <ul class="mt-2 list-disc space-y-2 pl-5">
-                            <li><a href="/Smart-Connectivity.html#infrastructure"
+                            <li><a @click="handleClick()" href="/Smart-Connectivity.html#infrastructure"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">q200
                                     Guardian
                                 </a></li>
-                            <li><a href="/concentrator-xn.html"
+                            <li><a @click="handleClick()" href="/concentrator-xn.html"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Concentrator
                                     XN
                                 </a></li>
-                            <li><a href="/Smart-Connectivity.html#global-connectivity"
+                            <li><a @click="handleClick()" href="/Smart-Connectivity.html#global-connectivity"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Global
                                     Connectivity
                                 </a></li>
                         </ul>
-                        <a href="/Smart-Connectivity.html#support"
+                        <a @click="handleClick()" href="/Smart-Connectivity.html#support"
                             class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Support</a>
                         <ul class="mt-2 list-disc space-y-2 pl-5">
-                            <li><a href="/Smart-Connectivity.html#support"
+                            <li><a @click="handleClick()" href="/Smart-Connectivity.html#support"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Extended
                                     Warranty</a></li>
                         </ul>
@@ -179,7 +179,7 @@ navbar.innerHTML = `
                         <div class="border-b border-slate-200">
                             <button onclick="toggleAccordion(4)"
                                 class="w-full flex justify-between items-center py-5 text-slate-800">
-                                <a href="/hit-the-ground-running.html">Hit the ground
+                                <a @click="handleClick()" href="/hit-the-ground-running.html">Hit the ground
                                     running</a>
                                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -192,11 +192,11 @@ navbar.innerHTML = `
                             <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-5">
                                     <ul class="list-disc space-y-2 pl-5">
-                                        <li><a href="/starter-kit.html"
+                                        <li><a @click="handleClick()" href="/starter-kit.html"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">With
                                                 your
                                                 Starter Kit</a></li>
-                                        <li><a href="/poc-in-a-box-package.html"
+                                        <li><a @click="handleClick()" href="/poc-in-a-box-package.html"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">With
                                                 the PoC
                                                 in
@@ -208,15 +208,15 @@ navbar.innerHTML = `
                     </div>
 
                     <div class="md:block hidden">
-                        <a href="/hit-the-ground-running.html"
+                        <a @click="handleClick()" href="/hit-the-ground-running.html"
                             class="font-medium transition-all duration-500 hover:text-[#4285f4]">Hit the ground
                             running</a>
                         <ul class="mt-2 list-disc space-y-2 pl-5">
-                            <li><a href="/starter-kit.html"
+                            <li><a @click="handleClick()" href="/starter-kit.html"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">With your
                                     Starter Kit
                                 </a></li>
-                            <li><a href="/poc-in-a-box-package.html"
+                            <li><a @click="handleClick()" href="/poc-in-a-box-package.html"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">With the PoC
                                     in
                                     a Box Package
@@ -227,7 +227,7 @@ navbar.innerHTML = `
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/buy_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold capitalize mt-4 text-[#4285f4] mb-5">Buy</h2>
-                    <a href="/buy-from-qiio.html"
+                    <a @click="handleClick()" href="/buy-from-qiio.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4]">Buy from qiio
                     </a>
 
@@ -235,7 +235,7 @@ navbar.innerHTML = `
                         <div class="border-b border-slate-200">
                             <button onclick="toggleAccordion(5)"
                                 class="w-full flex justify-between items-center py-5 text-slate-800">
-                                <a href="/buy-from-qiio.html#Distributors">Distributors</a>
+                                <a @click="handleClick()" href="/buy-from-qiio.html#Distributors">Distributors</a>
                                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -247,10 +247,10 @@ navbar.innerHTML = `
                             <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-5">
                                     <ul class="list-disc space-y-2 pl-5">
-                                        <li><a href="/buy-from-qiio.html#Distributors"
+                                        <li><a @click="handleClick()" href="/buy-from-qiio.html#Distributors"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Swisscom</a>
                                         </li>
-                                        <li><a href="/buy-from-qiio.html#Distributors"
+                                        <li><a @click="handleClick()" href="/buy-from-qiio.html#Distributors"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Avnet</a>
                                         </li>
                                     </ul>
@@ -261,21 +261,21 @@ navbar.innerHTML = `
 
                     <div class="md:block hidden ">
 
-                        <a href="/buy-from-qiio.html#Distributors"
+                        <a @click="handleClick()" href="/buy-from-qiio.html#Distributors"
                             class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Distributors
                         </a>
                         <ul class="mt-2 list-disc space-y-2 pl-5">
-                            <li><a href="/buy-from-qiio.html#Distributors"
+                            <li><a @click="handleClick()" href="/buy-from-qiio.html#Distributors"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Swisscom
                                 </a></li>
-                            <li><a href="/buy-from-qiio.html#Distributors"
+                            <li><a @click="handleClick()" href="/buy-from-qiio.html#Distributors"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Avnet
                                 </a></li>
                         </ul>
                     </div>
-                    <a href="/accessories.html"
+                    <a @click="handleClick()" href="/accessories.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Accessories</a>
-                    <a href="/resources.html"
+                    <a @click="handleClick()" href="/resources.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Resources</a>
                     <a class="/font-medium block mt-3">Shop <i class="fa-solid fa-lock"></i></a>
                 </div>
@@ -287,7 +287,7 @@ navbar.innerHTML = `
                         <div class="border-b border-slate-200">
                             <button onclick="toggleAccordion(6)"
                                 class="w-full flex justify-between items-center py-5 text-slate-800">
-                                <a href="/news.html">All News</a>
+                                <a @click="handleClick()" href="/news.html">All News</a>
                                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -299,16 +299,16 @@ navbar.innerHTML = `
                             <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-5">
                                     <ul class="list-disc space-y-2 pl-5">
-                                        <li><a href="/news-events.html"
+                                        <li><a @click="handleClick()" href="/news-events.html"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">News
                                                 &
                                                 Events</a>
                                         </li>
-                                        <li><a href="/press-releases.html"
+                                        <li><a @click="handleClick()" href="/press-releases.html"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Press
                                                 Releases</a>
                                         </li>
-                                        <li><a href="/media-coverage.html"
+                                        <li><a @click="handleClick()" href="/media-coverage.html"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Media
                                                 Coverage</a>
                                         </li>
@@ -319,40 +319,40 @@ navbar.innerHTML = `
                     </div>
 
                     <div class="md:block hidden">
-                        <a href="/news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">All
+                        <a @click="handleClick()" href="/news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">All
                             News
                         </a>
                         <ul class="mt-2 list-disc space-y-2 pl-5">
-                            <li><a href="/news-events.html"
+                            <li><a @click="handleClick()" href="/news-events.html"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">News &
                                     Events
                                 </a></li>
-                            <li><a href="/press-releases.html"
+                            <li><a @click="handleClick()" href="/press-releases.html"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Press
                                     Releases
                                 </a></li>
-                            <li><a href="/media-coverage.html"
+                            <li><a @click="handleClick()" href="/media-coverage.html"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Media
                                     Coverage
                                 </a></li>
                         </ul>
                     </div>
-                    <a href="/who-we-are.html"
+                    <a @click="handleClick()" href="/who-we-are.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Who we
                         are
                     </a>
-                    <a href="/vision-values.html"
+                    <a @click="handleClick()" href="/vision-values.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Vision &
                         Values
 
                     </a>
-                    <a href="/team.html"
+                    <a @click="handleClick()" href="/team.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Team
                     </a>
-                    <a href="/careers.html"
+                    <a @click="handleClick()" href="/careers.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Careers
                     </a>
-                    <a href="/social-responsibility.html"
+                    <a @click="handleClick()" href="/social-responsibility.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Social
                         Responsibility
                     </a>
@@ -361,7 +361,7 @@ navbar.innerHTML = `
                         <div class="border-b border-slate-200">
                             <button onclick="toggleAccordion(7)"
                                 class="w-full flex justify-between items-center py-5 text-slate-800">
-                                <a href="/security.html">Security</a>
+                                <a @click="handleClick()" href="/security.html">Security</a>
                                 <span id="icon-1" class="text-slate-800 transition-transform duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -373,11 +373,11 @@ navbar.innerHTML = `
                             <div id="content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                                 <div class="pb-5">
                                     <ul class="list-disc space-y-2 pl-5">
-                                        <li><a href="/vulnerability-disclosure-policy.html"
+                                        <li><a @click="handleClick()" href="/vulnerability-disclosure-policy.html"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Vulnerability
                                                 Disclosure Policy</a>
                                         </li>
-                                        <li><a href="/vulnerability-report.html"
+                                        <li><a @click="handleClick()" href="/vulnerability-report.html"
                                                 class="font-medium transition-all duration-500 hover:text-[#4285f4]">Report
                                                 Vulnerability</a>
                                         </li>
@@ -388,21 +388,21 @@ navbar.innerHTML = `
                     </div>
 
                     <div class="md:block hidden">
-                        <a href="/security.html"
+                        <a @click="handleClick()" href="/security.html"
                             class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Security
                         </a>
                         <ul class="mt-2 list-disc space-y-2 pl-5">
-                            <li><a href="/vulnerability-disclosure-policy.html"
+                            <li><a @click="handleClick()" href="/vulnerability-disclosure-policy.html"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Vulnerability
                                     Disclosure Policy
                                 </a></li>
-                            <li><a href="/vulnerability-report.html"
+                            <li><a @click="handleClick()" href="/vulnerability-report.html"
                                     class="font-medium transition-all duration-500 hover:text-[#4285f4]">Report
                                     Vulnerability
                                 </a></li>
                         </ul>
                     </div>
-                    <a href="/contact.html"
+                    <a @click="handleClick()" href="/contact.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Contact
                     </a>
                 </div>
@@ -450,3 +450,4 @@ bar.addEventListener('click', () => {
         nav.classList.add("h-screen");
     }
 });
+
