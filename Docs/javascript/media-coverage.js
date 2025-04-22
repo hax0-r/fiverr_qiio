@@ -128,6 +128,10 @@ cardsData.forEach(card => {
     </div>
       <h2 class="text-[#4285f4] text-xl font-medium mt-2">${card.date}</h2>
       <p class="text-gray-800 mt-1">${card.description}</p>
+      <div class="flex gap-3 items-center">
+                    <div class="md:w-60 w-48 bg-[#4285f4] p-0.5 mt-4"></div>
+                    <span class="dots mt-4"></span>
+                </div>
     `;
 
     container.appendChild(cardElement);
