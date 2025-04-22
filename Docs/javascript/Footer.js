@@ -10,13 +10,17 @@ footer.innerHTML = `
             </div>
 
             <div class="w-full text-gray-700">
-                <h2 class="font-medium text-lg mb-3 text-gray-800">Contact Us</h2>
+                <h2 class="font-medium text-xl mb-3 text-gray-800">Contact Us</h2>
                 <p> <span class="font-semibold">qiio Switzerland AG</span> <br>
                     Chamerstrasse 42a <br>
                     6331 Hünenberg <br>
                     Switzerland <br>
                     <a href="mailto:info@qiio.com" class="hover:underline">info@qiio.com</a>
                 </p>
+                <div class="flex gap-3 items-center md:mt-1.5">
+                    <div class="md:w-60 w-48 bg-[#4285f4] p-0.5 mt-4"></div>
+                    <span class="dots mt-4"></span>
+                </div>                
             </div>
 
             <div class="w-full text-gray-700">
@@ -27,8 +31,12 @@ footer.innerHTML = `
                     <li><a href="/Cookie-Policy.html" class="hover:underline"> Cookie Policy</a></li>
                     <li><a href="/Privacy-Policy.html" class="hover:underline"> Privacy Policy</a></li>
                     <li><a href="/Imprint.html" class="hover:underline"> Imprint</a></li>
+                    <li><a class="md:block hidden select-none" >&nbsp;</a></li>
                 </ul>
-
+                <div class="flex gap-3 items-center">
+                    <div class="md:w-60 w-48 bg-[#4285f4] p-0.5 mt-4"></div>
+                    <span class="dots mt-4"></span>
+                </div>
             </div>
 
         </div>
