@@ -1,6 +1,6 @@
 const navbar = document.getElementById("navbar")
 navbar.innerHTML = `
-    <div x-data="accordion(1)" id="nav" class="fixed top-0 left-0 z-50 w-full overflow-auto ">
+   <div x-data="accordion(1)" id="nav" class="fixed top-0 left-0 z-50 w-full overflow-auto ">
 
         <!-- Navbar -->
         <nav class=" h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
@@ -12,82 +12,217 @@ navbar.innerHTML = `
                     <a href="/careers.html"
                         class="font-medium  transition-all duration-500 hover:text-[#4285f4]">Career</a>
                     <a href="/news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">News</a>
-                    <img src="/Docs/Assets/bar.svg" id="bar" class="h-6 opacity-90 cursor-pointer" @click="handleClick()"
-                        alt="bar">
+                    <img src="/Docs/Assets/bar.svg" id="bar" class="h-6 opacity-90 cursor-pointer"
+                        @click="handleClick()" alt="bar">
                 </div>
             </div>
         </nav>
 
         <!-- Collapsible Panel -->
-        <div class="transition-all duration-500 overflow-hidden absolute top-[6rem] w-full z-40 bg-white"
+        <div class="transition-all duration-500 overflow-auto absolute top-[6rem] w-full z-40 bg-white"
             :style="open ? 'max-height: ' + tabHeight + 'px' : 'max-height: 0px'">
-            <div x-ref="tab" class="max-w-7xl p-5 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 w-full mx-auto">
+            <div x-ref="tab"
+                class="max-w-7xl overflow-auto p-5 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 w-full mx-auto">
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/technology_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold  mt-4 text-[#4285f4] mb-5">qiio Smart Connectivity</h2>
                     <a href="Smart-Connectivity.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4]">This is Smart
                         Connectivity</a>
-                    <a href="/Smart-Connectivity.html#qiio-sphere-studio"
-                        class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">qiio
-                        Sphere
-                        Studio®</a>
-                    <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
-                                Survey</a></li>
-                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
-                                Triage</a></li>
-                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
-                                Insurance</a></li>
-                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
-                                Location</a></li>
-                    </ul>
-                    <a href="/Smart-Connectivity.html#infrastructure"
-                        class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Infrastructure</a>
-                    <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="/Smart-Connectivity.html#infrastructure"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">q200
-                                Guardian
-                            </a></li>
-                        <li><a href="/concentrator-xn.html"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Concentrator
-                                XN
-                            </a></li>
-                        <li><a href="/Smart-Connectivity.html#global-connectivity"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Global
-                                Connectivity
-                            </a></li>
-                    </ul>
-                    <a href="/Smart-Connectivity.html#support"
-                        class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Support</a>
-                    <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="/Smart-Connectivity.html#support"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Extended
-                                Warranty</a></li>
-                    </ul>
+
+                    <div class="md:hidden block">
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(1)"
+                                class="w-full flex justify-between items-center py-5 text-slate-800">
+                                <a href="/Smart-Connectivity.html#qiio-sphere-studio">qiio Sphere Studio®</a>
+                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5">
+                                    <ul class="list-disc space-y-2 pl-5">
+                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                                Survey</a></li>
+                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                                Triage</a></li>
+                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                                Insurance</a></li>
+                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                                Location</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(2)"
+                                class="w-full flex justify-between items-center py-5 text-slate-800">
+                                <a href="/Smart-Connectivity.html#infrastructure">Infrastructure</a>
+                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5">
+                                    <ul class="list-disc space-y-2 pl-5">
+                                        <li><a href="/Smart-Connectivity.html#infrastructure"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">q200
+                                                Guardian
+                                            </a></li>
+                                        <li><a href="/concentrator-xn.html"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Concentrator
+                                                XN
+                                            </a></li>
+                                        <li><a href="/Smart-Connectivity.html#global-connectivity"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Global
+                                                Connectivity
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(3)"
+                                class="w-full flex justify-between items-center py-5 text-slate-800">
+                                <a href="/Smart-Connectivity.html#support">Support</a>
+                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5">
+                                    <ul class="list-disc space-y-2 pl-5">
+                                        <li><a href="/Smart-Connectivity.html#support"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Extended
+                                                Warranty</a></li>
+                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                                Triage</a></li>
+                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                                Insurance</a></li>
+                                        <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                                Location</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:block hidden">
+                        <a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                            class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">qiio
+                            Sphere
+                            Studio®</a>
+                        <ul class="mt-2 list-disc space-y-2 pl-5">
+                            <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                    Survey</a></li>
+                            <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                    Triage</a></li>
+                            <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                    Insurance</a></li>
+                            <li><a href="/Smart-Connectivity.html#qiio-sphere-studio"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Connectivity
+                                    Location</a></li>
+                        </ul>
+
+                        <a href="/Smart-Connectivity.html#infrastructure"
+                            class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Infrastructure</a>
+                        <ul class="mt-2 list-disc space-y-2 pl-5">
+                            <li><a href="/Smart-Connectivity.html#infrastructure"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">q200
+                                    Guardian
+                                </a></li>
+                            <li><a href="/concentrator-xn.html"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Concentrator
+                                    XN
+                                </a></li>
+                            <li><a href="/Smart-Connectivity.html#global-connectivity"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Global
+                                    Connectivity
+                                </a></li>
+                        </ul>
+                        <a href="/Smart-Connectivity.html#support"
+                            class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Support</a>
+                        <ul class="mt-2 list-disc space-y-2 pl-5">
+                            <li><a href="/Smart-Connectivity.html#support"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Extended
+                                    Warranty</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/products_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold  mt-4 text-[#4285f4] mb-5">Succeed with qiio Smart
                         Connectivity</h2>
-                    <a href="/hit-the-ground-running.html"
-                        class="font-medium transition-all duration-500 hover:text-[#4285f4]">Hit the ground
-                        running</a>
-                    <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="/starter-kit.html"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">With your
-                                Starter Kit
-                            </a></li>
-                        <li><a href="/poc-in-a-box-package.html"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">With the PoC
-                                in
-                                a Box Package
-                            </a></li>
-                    </ul>
+                    <div class="md:hidden block">
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(4)"
+                                class="w-full flex justify-between items-center py-5 text-slate-800">
+                                <a href="/hit-the-ground-running.html">Hit the ground
+                                    running</a>
+                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5">
+                                    <ul class="list-disc space-y-2 pl-5">
+                                        <li><a href="/starter-kit.html"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">With
+                                                your
+                                                Starter Kit</a></li>
+                                        <li><a href="/poc-in-a-box-package.html"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">With
+                                                the PoC
+                                                in
+                                                a Box Package</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:block hidden">
+                        <a href="/hit-the-ground-running.html"
+                            class="font-medium transition-all duration-500 hover:text-[#4285f4]">Hit the ground
+                            running</a>
+                        <ul class="mt-2 list-disc space-y-2 pl-5">
+                            <li><a href="/starter-kit.html"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">With your
+                                    Starter Kit
+                                </a></li>
+                            <li><a href="/poc-in-a-box-package.html"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">With the PoC
+                                    in
+                                    a Box Package
+                                </a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/buy_navi.jpg" class="w-full rounded-lg" alt="">
@@ -95,17 +230,49 @@ navbar.innerHTML = `
                     <a href="/buy-from-qiio.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4]">Buy from qiio
                     </a>
-                    <a href="/buy-from-qiio.html#Distributors"
-                        class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Distributors
-                    </a>
-                    <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="/buy-from-qiio.html#Distributors"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Swisscom
-                            </a></li>
-                        <li><a href="/buy-from-qiio.html#Distributors"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Avnet
-                            </a></li>
-                    </ul>
+
+                    <div class="md:hidden block">
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(5)"
+                                class="w-full flex justify-between items-center py-5 text-slate-800">
+                                <a href="/buy-from-qiio.html#Distributors">Distributors</a>
+                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5">
+                                    <ul class="list-disc space-y-2 pl-5">
+                                        <li><a href="/buy-from-qiio.html#Distributors"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Swisscom</a>
+                                        </li>
+                                        <li><a href="/buy-from-qiio.html#Distributors"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Avnet</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:block hidden ">
+
+                        <a href="/buy-from-qiio.html#Distributors"
+                            class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Distributors
+                        </a>
+                        <ul class="mt-2 list-disc space-y-2 pl-5">
+                            <li><a href="/buy-from-qiio.html#Distributors"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Swisscom
+                                </a></li>
+                            <li><a href="/buy-from-qiio.html#Distributors"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Avnet
+                                </a></li>
+                        </ul>
+                    </div>
                     <a href="/accessories.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Accessories</a>
                     <a href="/resources.html"
@@ -115,22 +282,61 @@ navbar.innerHTML = `
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/about_navi.jpg" class="w-full rounded-lg" alt="">
                     <h2 class="text-lg font-semibold capitalize mt-4 text-[#4285f4] mb-5">About</h2>
-                    <a href="/news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">All News
-                    </a>
-                    <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="/news-events.html"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">News &
-                                Events
-                            </a></li>
-                        <li><a href="/press-releases.html"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Press
-                                Releases
-                            </a></li>
-                        <li><a href="/media-coverage.html"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Media
-                                Coverage
-                            </a></li>
-                    </ul>
+
+                    <div class="md:hidden block">
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(6)"
+                                class="w-full flex justify-between items-center py-5 text-slate-800">
+                                <a href="/news.html">All News</a>
+                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5">
+                                    <ul class="list-disc space-y-2 pl-5">
+                                        <li><a href="/news-events.html"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">News
+                                                &
+                                                Events</a>
+                                        </li>
+                                        <li><a href="/press-releases.html"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Press
+                                                Releases</a>
+                                        </li>
+                                        <li><a href="/media-coverage.html"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Media
+                                                Coverage</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:block hidden">
+                        <a href="/news.html" class="font-medium transition-all duration-500 hover:text-[#4285f4]">All
+                            News
+                        </a>
+                        <ul class="mt-2 list-disc space-y-2 pl-5">
+                            <li><a href="/news-events.html"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">News &
+                                    Events
+                                </a></li>
+                            <li><a href="/press-releases.html"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Press
+                                    Releases
+                                </a></li>
+                            <li><a href="/media-coverage.html"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Media
+                                    Coverage
+                                </a></li>
+                        </ul>
+                    </div>
                     <a href="/who-we-are.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Who we
                         are
@@ -150,30 +356,73 @@ navbar.innerHTML = `
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Social
                         Responsibility
                     </a>
-                    <a href="/security.html"
-                        class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Security
-                    </a>
-                    <ul class="mt-2 list-disc space-y-2 pl-5">
-                        <li><a href="/vulnerability-disclosure-policy.html"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Vulnerability
-                                Disclosure Policy
-                            </a></li>
-                        <li><a href="/vulnerability-report.html"
-                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Report
-                                Vulnerability
-                            </a></li>
-                    </ul>
+
+                    <div class="md:hidden block">
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(7)"
+                                class="w-full flex justify-between items-center py-5 text-slate-800">
+                                <a href="/security.html">Security</a>
+                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5">
+                                    <ul class="list-disc space-y-2 pl-5">
+                                        <li><a href="/vulnerability-disclosure-policy.html"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Vulnerability
+                                                Disclosure Policy</a>
+                                        </li>
+                                        <li><a href="/vulnerability-report.html"
+                                                class="font-medium transition-all duration-500 hover:text-[#4285f4]">Report
+                                                Vulnerability</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:block hidden">
+                        <a href="/security.html"
+                            class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Security
+                        </a>
+                        <ul class="mt-2 list-disc space-y-2 pl-5">
+                            <li><a href="/vulnerability-disclosure-policy.html"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Vulnerability
+                                    Disclosure Policy
+                                </a></li>
+                            <li><a href="/vulnerability-report.html"
+                                    class="font-medium transition-all duration-500 hover:text-[#4285f4]">Report
+                                    Vulnerability
+                                </a></li>
+                        </ul>
+                    </div>
                     <a href="/contact.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4] block mt-3">Contact
                     </a>
                 </div>
-
             </div>
         </div>
     </div>
     <div class="h-[6rem]"></div>
-
 `
+
+function toggleAccordion(index) {
+    const content = document.getElementById(`content-${index}`);
+    const icon = document.getElementById(`icon-${index}`);
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = '0';
+    } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+    }
+}
+
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('accordion', (idx) => ({
