@@ -441,13 +441,26 @@ document.addEventListener('alpine:init', () => {
 const bar = document.getElementById("bar");
 const nav = document.getElementById("nav");
 
+let isTransitioning = false;
+
 bar.addEventListener('click', () => {
+    if (isTransitioning) return; // Prevent spam clicks
+
+    isTransitioning = true;
+
     if (nav.classList.contains("h-screen")) {
+        // Close nav smoothly
+        nav.classList.add("transition-all", "duration-1000");
         setTimeout(() => {
             nav.classList.remove("h-screen");
-        }, 1000);
+            isTransitioning = false;
+        }, 1000); // Match duration
     } else {
-        nav.classList.add("h-screen");
+        nav.classList.add("h-screen", "transition-all", "duration-1000");
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 1000); // Match duration
     }
 });
+
 
