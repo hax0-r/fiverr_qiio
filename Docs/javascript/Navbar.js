@@ -24,7 +24,7 @@ navbar.innerHTML = `
             <div x-ref="tab" class="max-w-7xl p-5 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 w-full mx-auto">
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/technology_navi.jpg" class="w-full rounded-lg" alt="">
-                    <h2 class="text-lg font-semibold capitalize mt-4 text-[#4285f4] mb-5">qiio Smart Connectivity</h2>
+                    <h2 class="text-lg font-semibold  mt-4 text-[#4285f4] mb-5">qiio Smart Connectivity</h2>
                     <a href="Smart-Connectivity.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4]">This is Smart
                         Connectivity</a>
@@ -72,7 +72,7 @@ navbar.innerHTML = `
                 </div>
                 <div class="w-full text-gray-800">
                     <img src="/Docs/Assets/products_navi.jpg" class="w-full rounded-lg" alt="">
-                    <h2 class="text-lg font-semibold capitalize mt-4 text-[#4285f4] mb-5">Succeed with qiio Smart
+                    <h2 class="text-lg font-semibold  mt-4 text-[#4285f4] mb-5">Succeed with qiio Smart
                         Connectivity</h2>
                     <a href="/hit-the-ground-running.html"
                         class="font-medium transition-all duration-500 hover:text-[#4285f4]">Hit the ground
