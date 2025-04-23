@@ -1,7 +1,6 @@
 const navbar = document.getElementById("navbar")
 navbar.innerHTML = `
-   <div x-data="accordion(1)" id="nav" class="fixed top-0 left-0 z-50 w-full overflow-auto ">
-
+   <div x-data="accordion(1)" id="nav" class="fixed top-0 left-0 z-50 w-full  overflow-hidden">
         <!-- Navbar -->
         <nav class=" h-24 flex items-center justify-center top-0 left-0 bg-white z-40 w-full">
             <div class="w-full max-w-7xl mx-auto p-5 flex items-center justify-between">
@@ -447,16 +446,21 @@ bar.addEventListener('click', () => {
     if (isTransitioning) return; // Prevent spam clicks
 
     isTransitioning = true;
+    const overflow = false
 
     if (nav.classList.contains("h-screen")) {
         // Close nav smoothly
         nav.classList.add("transition-all", "duration-1000");
+        nav.classList.add("overflow-hidden");
+        nav.classList.remove("overflow-auto");
         setTimeout(() => {
             nav.classList.remove("h-screen");
             isTransitioning = false;
         }, 1000); // Match duration
     } else {
         nav.classList.add("h-screen", "transition-all", "duration-1000");
+        nav.classList.remove("overflow-hidden");
+        nav.classList.add("overflow-auto");
         setTimeout(() => {
             isTransitioning = false;
         }, 1000); // Match duration
